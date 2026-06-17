@@ -119,7 +119,7 @@ aws eks update-kubeconfig --region us-east-1 --name devops-portfolio-prod-eks
 Set these values:
 
 ```bash
-export IMAGE="ghcr.io/your-github-user/devops-portfolio:latest"
+export IMAGE="ghcr.io/muhammad-kashif-ijaz/devops-portfolio-full-ready:latest"
 export MYSQL_HOST="your-rds-endpoint"
 export MYSQL_DATABASE="portfolio"
 export MYSQL_USERNAME="portfolio_admin"
@@ -135,7 +135,7 @@ Deploy:
 On Windows PowerShell:
 
 ```powershell
-$env:IMAGE="ghcr.io/your-github-user/devops-portfolio:latest"
+$env:IMAGE="ghcr.io/muhammad-kashif-ijaz/devops-portfolio-full-ready:latest"
 $env:MYSQL_HOST="your-rds-endpoint"
 $env:MYSQL_DATABASE="portfolio"
 $env:MYSQL_USERNAME="portfolio_admin"
@@ -209,6 +209,8 @@ replace-with-your-terraform-state-bucket
 replace-with-your-terraform-lock-table
 replace-with-a-long-password
 ```
+
+GHCR image paths must be lowercase. The GitHub Actions pipeline automatically converts your repo path to lowercase before building the Docker image.
 
 ## What You Configure
 

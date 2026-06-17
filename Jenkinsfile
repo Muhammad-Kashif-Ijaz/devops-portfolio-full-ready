@@ -14,13 +14,21 @@ pipeline {
     IMAGE_REGISTRY = 'ghcr.io'
     IMAGE_REPOSITORY = credentials('image-repository')
     IMAGE_TAG = "${env.BUILD_NUMBER}"
-    IMAGE = "${env.IMAGE_REGISTRY}/${env.IMAGE_REPOSITORY}:${env.IMAGE_TAG}"
   }
 
   stages {
     stage('Checkout') {
       steps {
         checkout scm
+      }
+    }
+
+    stage('Prepare Image Name') {
+      steps {
+        script {
+          env.IMAGE = "${env.IMAGE_REGISTRY}/${env.IMAGE_REPOSITORY.toLowerCase()}:${env.IMAGE_TAG}"
+        }
+        echo "Using image ${env.IMAGE}"
       }
     }
 

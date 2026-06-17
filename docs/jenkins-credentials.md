@@ -9,7 +9,7 @@ Create these Jenkins credentials before running the `Jenkinsfile`.
 | `aws-region` | Secret text | `us-east-1` |
 | `eks-cluster-name` | Secret text | `devops-portfolio-prod-eks` |
 | `ghcr-token` | Username/password | GitHub username + PAT with package write access |
-| `image-repository` | Secret text | `your-github-user/devops-portfolio` |
+| `image-repository` | Secret text | `muhammad-kashif-ijaz/devops-portfolio-full-ready` |
 | `mysql-host` | Secret text | RDS endpoint |
 | `mysql-database` | Secret text | `portfolio` |
 | `mysql-username` | Secret text | `portfolio_admin` |
@@ -29,3 +29,5 @@ Recommended Jenkins plugins:
 - Credentials Binding
 - Docker Pipeline
 - Blue Ocean, optional
+
+GHCR repository names must be lowercase. The `Jenkinsfile` lowercases the value automatically, but keeping the credential lowercase is cleaner.
