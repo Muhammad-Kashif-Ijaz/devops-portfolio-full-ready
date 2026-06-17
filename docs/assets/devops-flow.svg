@@ -1,0 +1,72 @@
+<svg width="1200" height="260" viewBox="0 0 1200 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="260" rx="20" fill="#06100A"/>
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#4CFF9E"/>
+      <stop offset="55%" stop-color="#D8FF55"/>
+      <stop offset="100%" stop-color="#FFE66A"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g opacity=".28">
+    <path d="M0 210 C260 120 400 260 650 130 S980 120 1200 45" stroke="url(#g)" stroke-width="2"/>
+    <path d="M0 70 C280 150 420 20 680 120 S980 220 1200 120" stroke="url(#g)" stroke-width="2"/>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <g filter="url(#glow)">
+      <circle cx="115" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="115" y="136" fill="#F6FFE8" font-size="17">CODE</text>
+      <circle r="6" fill="#D8FF55">
+        <animateMotion dur="5s" repeatCount="indefinite" path="M157 130 L277 130 L277 130"/>
+      </circle>
+    </g>
+    <g filter="url(#glow)">
+      <circle cx="320" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="320" y="136" fill="#F6FFE8" font-size="17">CI/CD</text>
+      <circle r="6" fill="#D8FF55">
+        <animateMotion dur="5s" begin=".8s" repeatCount="indefinite" path="M362 130 L482 130 L482 130"/>
+      </circle>
+    </g>
+    <g filter="url(#glow)">
+      <circle cx="525" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="525" y="136" fill="#F6FFE8" font-size="17">IMAGE</text>
+      <circle r="6" fill="#D8FF55">
+        <animateMotion dur="5s" begin="1.6s" repeatCount="indefinite" path="M567 130 L687 130 L687 130"/>
+      </circle>
+    </g>
+    <g filter="url(#glow)">
+      <circle cx="730" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="730" y="136" fill="#F6FFE8" font-size="17">EKS</text>
+      <circle r="6" fill="#D8FF55">
+        <animateMotion dur="5s" begin="2.4s" repeatCount="indefinite" path="M772 130 L892 130 L892 130"/>
+      </circle>
+    </g>
+    <g filter="url(#glow)">
+      <circle cx="935" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="935" y="136" fill="#F6FFE8" font-size="17">AWS</text>
+      <circle r="6" fill="#D8FF55">
+        <animateMotion dur="5s" begin="3.2s" repeatCount="indefinite" path="M977 130 L1097 130 L1097 130"/>
+      </circle>
+    </g>
+    <g filter="url(#glow)">
+      <circle cx="1120" cy="130" r="42" fill="#0B2012" stroke="url(#g)" stroke-width="2"/>
+      <text x="1120" y="136" fill="#F6FFE8" font-size="17">LIVE</text>
+    </g>
+  </g>
+  <g stroke="url(#g)" stroke-width="3" stroke-linecap="round" opacity=".75">
+    <path d="M160 130H276"/>
+    <path d="M365 130H481"/>
+    <path d="M570 130H686"/>
+    <path d="M775 130H891"/>
+    <path d="M980 130H1076"/>
+  </g>
+  <text x="600" y="228" fill="#B9C8AE" font-family="Segoe UI, Arial, sans-serif" font-size="18" text-anchor="middle">
+    Dockerized portfolio -> CI/CD -> Kubernetes on AWS -> MySQL + ELK observability
+  </text>
+</svg>

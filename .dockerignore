@@ -1,0 +1,17 @@
+.git
+.github
+.terraform
+terraform/**/.terraform
+terraform/**/*.tfstate
+terraform/**/*.tfstate.*
+node_modules
+coverage
+*.log
+.env
+.env.*
+!*.env.example
+README.md
+docs
+monitoring
+k8s
+Jenkinsfile

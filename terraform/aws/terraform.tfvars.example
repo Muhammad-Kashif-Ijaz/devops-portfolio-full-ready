@@ -1,0 +1,18 @@
+project_name  = "devops-portfolio"
+environment   = "prod"
+aws_region    = "us-east-1"
+vpc_cidr      = "10.40.0.0/16"
+az_count      = 2
+
+kubernetes_version = "1.30"
+node_instance_type = "t3.medium"
+node_desired_size  = 2
+node_min_size      = 1
+node_max_size      = 4
+
+mysql_database              = "portfolio"
+mysql_username              = "portfolio_admin"
+mysql_password              = "replace-with-a-long-password"
+mysql_instance_class        = "db.t4g.micro"
+mysql_allocated_storage     = 20
+mysql_backup_retention_days = 7

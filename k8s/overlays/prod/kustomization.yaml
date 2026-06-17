@@ -1,0 +1,44 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+namespace: portfolio-prod
+nameSuffix: -prod
+resources:
+  - ../../base
+patches:
+  - target:
+      kind: Namespace
+      name: portfolio
+    patch: |-
+      - op: replace
+        path: /metadata/name
+        value: portfolio-prod
+  - target:
+      kind: Deployment
+      name: portfolio-web
+    patch: |-
+      - op: replace
+        path: /spec/replicas
+        value: 3
+  - target:
+      kind: Ingress
+      name: portfolio-web
+    patch: |-
+      - op: replace
+        path: /spec/rules/0/host
+        value: portfolio.example.com
+  - target:
+      kind: Deployment
+      name: portfolio-web
+    patch: |-
+      - op: replace
+        path: /spec/template/spec/containers/0/env/0/valueFrom/secretKeyRef/name
+        value: portfolio-mysql-prod
+      - op: replace
+        path: /spec/template/spec/containers/0/env/1/valueFrom/secretKeyRef/name
+        value: portfolio-mysql-prod
+      - op: replace
+        path: /spec/template/spec/containers/0/env/2/valueFrom/secretKeyRef/name
+        value: portfolio-mysql-prod
+images:
+  - name: ghcr.io/your-github-user/devops-portfolio
+    newTag: latest
