@@ -18,3 +18,9 @@ Add these in your GitHub repository:
 The pipeline uses GitHub Container Registry automatically through `GITHUB_TOKEN`.
 
 If you prefer Docker Hub instead of GHCR, change `.github/workflows/ci-cd.yml` image/login settings.
+
+For the full pipeline explanation, see:
+
+```text
+docs/github-actions-guide.md
+```

@@ -31,3 +31,9 @@ Recommended Jenkins plugins:
 - Blue Ocean, optional
 
 GHCR repository names must be lowercase. The `Jenkinsfile` lowercases the value automatically, but keeping the credential lowercase is cleaner.
+
+For the full Jenkins setup and troubleshooting guide, see:
+
+```text
+docs/jenkins-guide.md
+```

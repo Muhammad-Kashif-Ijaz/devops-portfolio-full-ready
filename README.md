@@ -387,6 +387,12 @@ See:
 docs/github-secrets.md
 ```
 
+Full GitHub Actions guide:
+
+```text
+docs/github-actions-guide.md
+```
+
 Push to `main` to trigger the pipeline.
 
 Important: GHCR image paths must be lowercase. The workflow automatically converts your GitHub repo path to lowercase.
@@ -403,6 +409,12 @@ Create Jenkins credentials:
 
 ```text
 docs/jenkins-credentials.md
+```
+
+Full Jenkins guide:
+
+```text
+docs/jenkins-guide.md
 ```
 
 Required Jenkins agent tools:
