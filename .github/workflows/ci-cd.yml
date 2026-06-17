@@ -54,7 +54,7 @@ jobs:
         run: |
           docker run -d --name portfolio-smoke -p 8080:8080 "$IMAGE"
           sleep 5
-          ./scripts/smoke-test.sh http://127.0.0.1:8080
+          sh ./scripts/smoke-test.sh http://127.0.0.1:8080
           docker rm -f portfolio-smoke
 
       - name: Push image

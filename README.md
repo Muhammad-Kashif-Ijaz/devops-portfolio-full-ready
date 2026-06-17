@@ -129,7 +129,7 @@ export MYSQL_PASSWORD="your-rds-password"
 Deploy:
 
 ```bash
-./scripts/deploy-k8s.sh
+sh ./scripts/deploy-k8s.sh
 ```
 
 On Windows PowerShell:
